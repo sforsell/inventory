@@ -35,7 +35,6 @@
 
 /node_modules
 
-.pnp.*
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
@@ -45,3 +44,5 @@
 
 .env*
 !.env.sample
+
+.byebug_history
