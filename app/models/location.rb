@@ -7,6 +7,7 @@ class Location < ApplicationRecord
   has_many :recipe_ingredients, through: :location_recipes
   has_many :ingredients, through: :recipe_ingredients
   has_many :ingredient_inventories, class_name: 'LocationIngredient'
+  has_many :inventory_updates
 
   before_save :set_parameterized_name, if: :will_save_change_to_name?
 

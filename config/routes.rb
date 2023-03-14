@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   constraints subdomain: /.*/ do
     get 'recipes', to: 'inventory#recipes'
     get 'inventory/delivery', to: 'inventory#show_inventory'
+    post 'inventory/delivery', to: 'inventory#delivery'
   end
 
   root 'inventory#index'
