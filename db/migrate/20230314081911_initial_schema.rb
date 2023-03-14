@@ -1,7 +1,8 @@
 class InitialSchema < ActiveRecord::Migration[7.0]
   def change
     create_table :locations do |t|
-      t.string :name, index: true, null: false
+      t.string :name, null: false
+      t.string :parameterized_name, index: true
       t.string :address
       t.timestamps
     end
