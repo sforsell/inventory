@@ -36,7 +36,7 @@ namespace :backfill_initial_data do
         rec = Recipe.find(row['id'])
       end
       begin
-        if row['quantity'].to_i > 0
+        if row['quantity'].to_i.positive?
           RecipeIngredient.create!(recipe: rec, ingredient_id: row['ingredient_id'],
                                    quantity: row['quantity'])
         end

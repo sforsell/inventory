@@ -4,3 +4,10 @@ AllCops:
     - bin/bundle
     - db/schema.rb
     - test/test_helper.rb
+    - db/migrate/*
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
