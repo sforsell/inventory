@@ -43,4 +43,6 @@
 !.yarn/versions
 
 .env*
+!.env.sample
+
 .byebug_history
