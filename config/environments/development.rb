@@ -58,6 +58,8 @@ Rails.application.configure do
 
   # Suppress logger output for asset requests.
   config.assets.quiet = true
+  # set top level domain to 0 for localhost
+  config.action_dispatch.tld_length = 0
 
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true

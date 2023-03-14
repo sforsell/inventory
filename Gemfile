@@ -9,6 +9,7 @@ gem 'rails', '~> 7.0.4', '>= 7.0.4.2'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
+gem 'dotenv-rails', '~> 2.8', require: 'dotenv/rails-now'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
 
@@ -74,5 +75,3 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
-
-gem 'dotenv-rails', '~> 2.8'

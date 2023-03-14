@@ -15,7 +15,14 @@ export default () => (
           className="btn btn-lg custom-button"
           role="button"
         >
-          View Items
+          View Menu
+        </Link>
+        <Link
+          to="/inventory/delivery"
+          className="btn btn-lg custom-button"
+          role="button"
+        >
+          Register Delivery
         </Link>
       </div>
     </div>

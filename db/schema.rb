@@ -67,10 +67,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_14_081911) do
 
   create_table "locations", force: :cascade do |t|
     t.string "name", null: false
+    t.string "parameterized_name"
     t.string "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["name"], name: "index_locations_on_name"
+    t.index ["parameterized_name"], name: "index_locations_on_parameterized_name"
   end
 
   create_table "recipe_ingredients", force: :cascade do |t|
