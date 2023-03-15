@@ -3,9 +3,11 @@ services:
   db:
     env_file: .env
     image: postgres
+    volumes:
+      - postgres-store:/var/lib/postgresql/data
   web:
     build: .
-    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    command: bash -c "yarn install && yarn build && yarn build:css && rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
       - .:/app
     ports:
@@ -17,4 +19,4 @@ services:
       RAILS_ENV: development
       RAILS_MAX_THREADS: 5
 volumes:
-  postgres:
+  postgres-store:

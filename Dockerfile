@@ -8,7 +8,6 @@ RUN apt-get update -qq \
   apt-get update && apt-get install -y nodejs yarn
 ADD . /app
 WORKDIR /app
-RUN yarn install
 RUN bundle install
 EXPOSE 3000
 CMD ["bash"]
