@@ -43,6 +43,18 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_14_081911) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "inventory_updates", force: :cascade do |t|
+    t.bigint "location_id", null: false
+    t.bigint "location_ingredient_id", null: false
+    t.string "action", null: false
+    t.decimal "old_value", null: false
+    t.decimal "new_value", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["location_id"], name: "index_inventory_updates_on_location_id"
+    t.index ["location_ingredient_id"], name: "index_inventory_updates_on_location_ingredient_id"
+  end
+
   create_table "location_ingredients", force: :cascade do |t|
     t.bigint "ingredient_id", null: false
     t.bigint "location_id", null: false

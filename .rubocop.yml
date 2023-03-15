@@ -6,6 +6,9 @@ AllCops:
     - test/test_helper.rb
     - db/migrate/*
 
+Metrics/MethodLength:
+  Max: 25
+
 Style/FrozenStringLiteralComment:
   Enabled: false
 
