@@ -19,7 +19,9 @@ Currently there are two actions available for each location: See a list of recip
 ### Running locally (on your machine)
 
 *This assumes you have [Bundler](https://bundler.io/guides/getting_started.html) installed*
+
 *This has only been tested on a macOS in practice*
+
 *Yarn should install packages for Linux, Mac and Windows but for the rest there may be some differences in running commands or other things* 
 
 1. Run `bundle install` to install the Rails dependencies
@@ -46,6 +48,7 @@ This is a one repo Rails 7 application with a react front end. The Rails portion
 Some good commands and tools:
 - `rails c`: open up an interactive ruby console within the app context. Can check relationships such as `Location.first.employees` or `Employee.first.locations`
 - For the ruby portion you can add `byebug` anywhere in the code and it'll add a breakpoint there where you can inspect variables, and step through line by line. This does not work with foreman, which is what is used by the `bin/dev` command, so if you are working through something start the server with `rails s`.
+- `bundle exec rubocop` runs the ruby linter. `-a` autocorrects the violations that can be safely done. 
 
 
 ## What's next? 
